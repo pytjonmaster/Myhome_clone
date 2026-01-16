@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHome.ge - უძრავი ქონება</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="images/logo.png" alt="MyHome.ge" class="logo-img">
+            </div>
+            <div class="header-right">
+                <button class="btn-add">+ დამატება</button>
+                <button class="btn-lang">ქართული, $</button>
+                <button class="btn-icon">♡</button>
+                <img src="images/svg/search-svgrepo-com.svg" class="header-search-svg" alt="">
+                <button class="btn-login">შესვლა</button>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav>
+                <a href="#">იპოთეკა</a>
+                <a href="#">სააგენტოები</a>
+                <a href="#" class="nav-item-icon">
+                    <img src="images/svg/apartment-svgrepo-com.svg" class="nav-svg" alt="">
+                    ახალი პროექტები
+                </a>
+                <a href="#">აშენე</a>
+                <a href="#">შეფასება</a>
+                <a href="#" class="nav-new">
+                    ფასების სტატისტიკა 
+                    <span class="new-badge">
+                        <img src="images/svg/rocket-svgrepo-com.svg" class="badge-svg" alt="">
+                        სიახლე
+                    </span>
+                </a>
+            </nav>
+            <span class="phone">0 32 280 00 15</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-section">
+            <div class="search-box">
+                <div class="search-type">
+                    <span>გარიგების ტიპი</span>
+                    <select>
+                        <option>ქონების ტიპი</option>
+                        <option>ბინა</option>
+                        <option>სახლი</option>
+                        <option>კომერციული</option>
+                    </select>
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="მაგ. საბურთალო">
+                </div>
+                <div class="search-id">
+                    <input type="text" placeholder="ID, ტელეფონი, სიტყვა, ს/კ">
+                </div>
+                <button class="btn-filter" id="filter-btn">
+                    <img src="images/svg/horizontal-sliders-lines-svgrepo-com.svg" class="btn-svg" alt="">
+                </button>
+                <button class="btn-search">
+                    <img src="images/svg/search-svgrepo-com.svg" class="btn-svg-white" alt="">
+                    ძებნა
+                </button>
+            </div>
+            
+            <div class="filter-panel" id="filter-panel">
+                <div class="filter-header">
+                    <h3>ფილტრები</h3>
+                    <button class="filter-close" id="filter-close">✕</button>
+                </div>
+                
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <h4>ოთახების რაოდენობა</h4>
+                        <label><input type="checkbox" name="rooms" value="1"> 1 ოთახი</label>
+                        <label><input type="checkbox" name="rooms" value="2"> 2 ოთახი</label>
+                        <label><input type="checkbox" name="rooms" value="3"> 3 ოთახი</label>
+                        <label><input type="checkbox" name="rooms" value="4"> 4+ ოთახი</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>უბანი</h4>
+                        <label><input type="checkbox" name="district" value="saburtalo"> საბურთალო</label>
+                        <label><input type="checkbox" name="district" value="vake"> ვაკე</label>
+                        <label><input type="checkbox" name="district" value="isani"> ისანი</label>
+                        <label><input type="checkbox" name="district" value="varketili"> ვარკეთილი</label>
+                        <label><input type="checkbox" name="district" value="gldani"> გლდანი</label>
+                        <label><input type="checkbox" name="district" value="didube"> დიდუბე</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>ავეჯი</h4>
+                        <label><input type="checkbox" name="furniture" value="yes"> ავეჯით</label>
+                        <label><input type="checkbox" name="furniture" value="no"> ავეჯის გარეშე</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>გარემონტება</h4>
+                        <label><input type="checkbox" name="repair" value="new"> ახალი რემონტი</label>
+                        <label><input type="checkbox" name="repair" value="euro"> ევრორემონტი</label>
+                        <label><input type="checkbox" name="repair" value="old"> ძველი რემონტი</label>
+                        <label><input type="checkbox" name="repair" value="none"> რემონტის გარეშე</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>დამატებითი</h4>
+                        <label><input type="checkbox" name="extra" value="balcony"> აივანი</label>
+                        <label><input type="checkbox" name="extra" value="parking"> პარკინგი</label>
+                        <label><input type="checkbox" name="extra" value="elevator"> ლიფტი</label>
+                        <label><input type="checkbox" name="extra" value="heating"> გათბობა</label>
+                    </div>
+                </div>
+                
+                <div class="filter-footer">
+                    <button class="btn-reset" id="filter-reset">გასუფთავება</button>
+                    <button class="btn-apply" id="filter-apply">გამოყენება</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab active" data-page="">
+                <img src="images/svg/signal-good-svgrepo-com.svg" class="tab-svg" alt="">
+                <span>ფასების სტატისტიკა</span>
+                <span class="new-badge">
+                    <img src="images/svg/rocket-svgrepo-com.svg" class="badge-svg" alt="">
+                    სიახლე
+                </span>
+            </button>
+            <button class="tab" data-page="gudauri.html">
+                <img src="images/svg/skiing-svgrepo-com.svg" class="tab-svg" alt="">
+                <span>იქირავე გუდაურში</span>
+            </button>
+            <button class="tab" data-page="bakuriani.html">
+                <img src="images/svg/snowflake-svgrepo-com.svg" class="tab-svg" alt="">
+                <span>იქირავე ბაკურიანში</span>
+            </button>
+            <button class="tab" data-page="developer.html">
+                <img src="images/svg/buildings-svgrepo-com.svg" class="tab-svg" alt="">
+                <span>დეველოპ. ბინები</span>
+            </button>
+            <button class="tab" data-page="construction.html">
+                <img src="images/svg/contractor-builder-svgrepo-com.svg" class="tab-svg" alt="">
+                <span>მშენებარე ბინები</span>
+            </button>
+        </div>
+
+        <div class="section-header">
+            <h2>
+                <img src="images/svg/rocket-svgrepo-com.svg" class="section-svg vip-svg" alt="">
+                SUPER VIP განცხადებები
+            </h2>
+            <a href="#" class="see-all">ყველას ნახვა</a>
+        </div>
+
+        <div class="property-section">
+            <button class="section-arrow section-arrow-left" data-section="vip-properties">❮</button>
+            <div class="property-grid" id="vip-properties"></div>
+            <button class="section-arrow section-arrow-right" data-section="vip-properties">❯</button>
+        </div>
+
+        <div class="property-section">
+            <button class="section-arrow section-arrow-left" data-section="vip-properties-2">❮</button>
+            <div class="property-grid" id="vip-properties-2"></div>
+            <button class="section-arrow section-arrow-right" data-section="vip-properties-2">❯</button>
+        </div>
+
+        <div class="quick-categories">
+            <button class="quick-btn">
+                <img src="images/svg/house-svgrepo-com.svg" class="quick-svg" alt="">
+                <span>ბინები ქირით</span>
+            </button>
+            <button class="quick-btn">
+                <img src="images/svg/key-svgrepo-com.svg" class="quick-svg" alt="">
+                <span>იყიდება ბინები</span>
+            </button>
+            <button class="quick-btn">
+                <img src="images/svg/calendar-days-svgrepo-com.svg" class="quick-svg" alt="">
+                <span>ბინა დღიურად</span>
+            </button>
+            <button class="quick-btn">
+                <img src="images/svg/contract-sign-line-svgrepo-com.svg" class="quick-svg" alt="">
+                <span>გირავდება ბინა</span>
+            </button>
+            <button class="quick-btn">
+                <img src="images/svg/contractor-builder-svgrepo-com.svg" class="quick-svg" alt="">
+                <span>მშენებარე ბინები</span>
+            </button>
+        </div>
+
+        <div class="section-header">
+            <h2>
+                <img src="images/svg/apartment-svgrepo-com.svg" class="section-svg" alt="">
+                ახალი პროექტები
+            </h2>
+            <a href="#" class="see-all">ყველას ნახვა</a>
+        </div>
+
+        <div class="property-section">
+            <button class="section-arrow section-arrow-left" data-section="new-projects">❮</button>
+            <div class="property-grid" id="new-projects"></div>
+            <button class="section-arrow section-arrow-right" data-section="new-projects">❯</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-column">
+                <h4>ნავიგაცია</h4>
+                <a href="#">იპოთეკა</a>
+                <a href="#">სააგენტოები</a>
+                <a href="#">პროექტები</a>
+                <a href="#">შეფასება</a>
+                <a href="#">ფასების სტატისტიკა</a>
+                <a href="#">აუქციონი</a>
+                <a href="#">ფოტომომსახურება</a>
+            </div>
+            <div class="footer-column">
+                <h4>დახმარება</h4>
+                <a href="#">032 2 80 00 15</a>
+                <a href="#">info@myhome.ge</a>
+                <a href="#">ანონიმური უკუკავშირი</a>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <img src="images/svg/facebook-svgrepo-com.svg" alt="Facebook" class="social-svg">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="images/svg/instagram-svgrepo-com.svg" alt="Instagram" class="social-svg">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="images/svg/linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-svg">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>განცხადებები</h4>
+                <a href="#">ბინები ქირით</a>
+                <a href="#">ბინები ქირით თბილისში</a>
+                <a href="#">ქირავდება ბინა ბათუმში</a>
+                <a href="#">ქირავდება ბინა გლდანში</a>
+                <a href="#">ქირავდება კომერციული ფართი</a>
+                <a href="#">ბინები ქირით ვარკეთილში</a>
+            </div>
+            <div class="footer-column">
+                <h4>&nbsp;</h4>
+                <a href="#">იყიდება ბინები</a>
+                <a href="#">იყიდება ბინა თბილისში</a>
+                <a href="#">იყიდება ბინა ბათუმში</a>
+                <a href="#">იყიდება ბინები გლდანში</a>
+                <a href="#">იყიდება კერძო სახლი</a>
+                <a href="#">იყიდება მიწა</a>
+            </div>
+            <div class="footer-column">
+                <h4>&nbsp;</h4>
+                <a href="#">გირავდება ბინა</a>
+                <a href="#">გირავდება ბინა თბილისში</a>
+                <a href="#">გირავდება ბინა ბათუმში</a>
+                <a href="#">გირავდება ბინა ქუთაისში</a>
+                <a href="#">გირავდება ბინა გლდანში</a>
+                <a href="#">გირავდება ერთო სახლი</a>
+                <a href="#">გირავდება ბინა რუსთავში</a>
+            </div>
+        </div>
+        
+        <div class="footer-middle">
+            <div class="footer-links">
+                <a href="#">წესები და პირობები</a>
+                <a href="#">კონფიდენციალურობის პოლიტიკა</a>
+                <a href="#">განმოსხლევის პოლიტიკა</a>
+            </div>
+            <div class="footer-lang">
+                <span>🌐 ქართული, $</span>
+            </div>
+        </div>
+        
+        <div class="footer-partners">
+            <a href="https://superapp.tnet.ge" target="_blank" class="partner-logo partner-tnet">
+                <img src="images/Footer_imgs/tnet-removebg-preview.png" alt="TNET">
+            </a>
+            <a href="https://myauto.ge/ka" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/myauto.png" alt="MyAuto">
+            </a>
+            <a href="https://myparts.ge/ka/" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/myparts.png" alt="MyParts">
+            </a>
+            <a href="https://myhome.ge" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/myhome.png" alt="MyHome">
+            </a>
+            <a href="https://mymarket.ge" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/mymarket.png" alt="MyMarket">
+            </a>
+            <a href="https://superapp.tnet.ge" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/superapp.png" alt="Super App">
+            </a>
+            <a href="https://myjobs.ge/ka" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/myjobs.png" alt="MyJobs">
+            </a>
+            <a href="https://tkt.ge" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/tktge.png" alt="TKT.GE">
+            </a>
+            <a href="https://swoop.ge" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/swoop.png" alt="Swoop">
+            </a>
+            <a href="https://livo.ge" target="_blank" class="partner-logo">
+                <img src="images/Footer_imgs/livo.png" alt="Livo">
+            </a>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

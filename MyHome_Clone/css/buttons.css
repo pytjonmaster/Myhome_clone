@@ -1,0 +1,122 @@
+.btn-add {
+    background-color: #00b140;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #009933;
+}
+
+.btn-lang {
+    background-color: #f0f0f0;
+    border: solid 1px #ddd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: white;
+    border: solid 1px #ddd;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-filter {
+    background-color: #f5f5f5;
+    border: none;
+    border-left: solid 1px #e0e0e0;
+    padding: 0 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-filter:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-search {
+    background-color: #00b140;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-search:hover {
+    background-color: #009933;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.heart-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.heart-btn.active {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.quick-btn {
+    background-color: white;
+    border: solid 1px #e0e0e0;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 220px;
+}
+
+.quick-btn img {
+    flex-shrink: 0;
+}
+
+.quick-btn:hover {
+    border-color: #00b140;
+    background-color: #f0fff4;
+}
+
+.quick-icon {
+    margin-right: 10px;
+    font-size: 1.3em;
+}

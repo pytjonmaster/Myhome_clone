@@ -1,0 +1,107 @@
+.page-header {
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.page-header-icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.page-header-green {
+    background: linear-gradient(135deg, #00b140 0%, #008f34 100%);
+}
+
+.page-header-blue {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+}
+
+.page-header-purple {
+    background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
+}
+
+.page-header-orange {
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+}
+
+.apartments-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.apartments-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back-btn-green {
+    background-color: #00b140;
+}
+
+.back-btn-green:hover {
+    background-color: #008f34;
+}
+
+.back-btn-blue {
+    background-color: #2196F3;
+}
+
+.back-btn-blue:hover {
+    background-color: #1976D2;
+}
+
+.back-btn-purple {
+    background-color: #9C27B0;
+}
+
+.back-btn-purple:hover {
+    background-color: #7B1FA2;
+}
+
+.back-btn-orange {
+    background-color: #FF9800;
+}
+
+.back-btn-orange:hover {
+    background-color: #F57C00;
+}
+
+.results-count {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}

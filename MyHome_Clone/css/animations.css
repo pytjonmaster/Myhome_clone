@@ -1,0 +1,61 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.property-card {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.property-image img {
+    transition: opacity 0.3s;
+}
+
+.btn-search, .btn-add {
+    transition: background-color 0.3s;
+}
+
+.property-card {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.property-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.quick-btn {
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.heart-btn {
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.heart-btn:hover {
+    transform: scale(1.1);
+}
+
+.heart-btn.active {
+    transform: scale(1.1);
+}
+
+.arrow-btn {
+    transition: opacity 0.3s, background-color 0.2s, transform 0.2s;
+}
+
+.arrow-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.dot {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}

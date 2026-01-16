@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>იქირავე გუდაურში - MyHome.ge</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/category-page.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="MyHome.ge" class="logo-img"></a>
+            </div>
+            <div class="header-right">
+                <button class="btn-add">+ დამატება</button>
+                <button class="btn-lang">ქართული, $</button>
+                <button class="btn-icon">♡</button>
+                <button class="btn-login">შესვლა</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header page-header-green">
+        <h1>
+            <img src="images/svg/skiing-svgrepo-com.svg" alt="" class="page-header-icon">
+            იქირავე გუდაურში
+        </h1>
+        <p>საუკეთესო შეთავაზებები გუდაურში დასვენებისთვის</p>
+    </div>
+
+    <main>
+        <div class="apartments-container">
+            <a href="index.html" class="back-btn back-btn-green">← უკან დაბრუნება</a>
+            <p class="results-count">ნაპოვნია <span id="count">0</span> განცხადება</p>
+            <div class="apartments-grid" id="apartments-grid"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 MyHome.ge - ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cards.js"></script>
+    <script>
+        function loadPageApartments() {
+            let container = document.getElementById("apartments-grid")
+            let countSpan = document.getElementById("count")
+            
+            for (let i = 0; i < gudauriApartments.length; i++) {
+                let card = createPropertyCard(gudauriApartments[i], "gudauri-" + i)
+                container.appendChild(card)
+            }
+            
+            countSpan.innerText = gudauriApartments.length
+        }
+        
+        loadPageApartments()
+    </script>
+    <script src="js/events.js"></script>
+</body>
+</html>

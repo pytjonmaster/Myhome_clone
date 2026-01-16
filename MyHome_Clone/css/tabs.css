@@ -1,0 +1,56 @@
+.category-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.tab {
+    background-color: white;
+    border: solid 1px #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab:hover {
+    border-color: #00b140;
+}
+
+.tab.active {
+    border: solid 2px #00b140;
+    background-color: #f0fff4;
+}
+
+.tab-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.new-badge {
+    background-color: #ff6600;
+    color: white;
+    font-size: 0.6em;
+    padding: 3px 8px;
+    border-radius: 10px;
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.tab .new-badge {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+}
+
+nav .new-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
