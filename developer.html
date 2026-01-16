@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>იქირავე გუდაურში - MyHome.ge</title>
+    <title>დეველოპერის ბინები - MyHome.ge</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/buttons.css">
@@ -16,7 +16,7 @@
     <header>
         <div class="header-top">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="MyHome.ge" class="logo-img"></a>
+                <a href="index.html"><img src="MyHome_Clone/images/logo.png" alt="MyHome.ge" class="logo-img"></a>
             </div>
             <div class="header-right">
                 <button class="btn-add">+ დამატება</button>
@@ -27,17 +27,17 @@
         </div>
     </header>
 
-    <div class="page-header page-header-green">
+    <div class="page-header page-header-purple">
         <h1>
-            <img src="images/svg/skiing-svgrepo-com.svg" alt="" class="page-header-icon">
-            იქირავე გუდაურში
+            <img src="MyHome_Clone/images/svg/buildings-svgrepo-com.svg" alt="" class="page-header-icon">
+            დეველოპერის ბინები
         </h1>
-        <p>საუკეთესო შეთავაზებები გუდაურში დასვენებისთვის</p>
+        <p>ბინები პირდაპირ დეველოპერებისგან საუკეთესო ფასად</p>
     </div>
 
     <main>
         <div class="apartments-container">
-            <a href="index.html" class="back-btn back-btn-green">← უკან დაბრუნება</a>
+            <a href="index.html" class="back-btn back-btn-purple">← უკან დაბრუნება</a>
             <p class="results-count">ნაპოვნია <span id="count">0</span> განცხადება</p>
             <div class="apartments-grid" id="apartments-grid"></div>
         </div>
@@ -56,12 +56,12 @@
             let container = document.getElementById("apartments-grid")
             let countSpan = document.getElementById("count")
             
-            for (let i = 0; i < gudauriApartments.length; i++) {
-                let card = createPropertyCard(gudauriApartments[i], "gudauri-" + i)
+            for (let i = 0; i < developerApartments.length; i++) {
+                let card = createPropertyCard(developerApartments[i], "developer-" + i)
                 container.appendChild(card)
             }
             
-            countSpan.innerText = gudauriApartments.length
+            countSpan.innerText = developerApartments.length
         }
         
         loadPageApartments()

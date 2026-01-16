@@ -7,7 +7,7 @@ function createPropertyCard(property, cardIndex) {
         priceTypeHTML = `<span class="price-type">${property.priceType}</span>`
     }
     
-    let badgeIcon = property.badge === "S-VIP" ? '<img src="images/svg/rocket-svgrepo-com.svg" alt="" class="badge-rocket-svg">' : ""
+    let badgeIcon = property.badge === "S-VIP" ? '<img src="MyHome_Clone/images/svg/rocket-svgrepo-com.svg" alt="" class="badge-rocket-svg">' : ""
     
     let dotsHTML = ""
     for (let i = 0; i < property.images.length; i++) {
@@ -32,7 +32,7 @@ function createPropertyCard(property, cardIndex) {
         <div class="property-info">
             <div class="price">${property.price} ${priceTypeHTML}</div>
             <p class="description">${property.description}</p>
-            <p class="location"><img src="images/svg/location-svgrepo-com.svg" alt="" class="location-svg"> ${property.location}</p>
+            <p class="location"><img src="MyHome_Clone/images/svg/location-svgrepo-com.svg" alt="" class="location-svg"> ${property.location}</p>
             <div class="property-details">
                 <span>🛏 ${property.rooms}</span>
                 <span>📐 ${property.floors}</span>
